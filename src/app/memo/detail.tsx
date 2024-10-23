@@ -1,8 +1,8 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native"
-import { AntDesign } from "@expo/vector-icons"
 
 import Header from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
+import Icon from "../../components/icon"
 
 const Detaile = (): JSX.Element => {
     return (
@@ -22,7 +22,7 @@ const Detaile = (): JSX.Element => {
             </ScrollView>
 
             <CircleButton style={{ top:160, bottom:'auto' }}>
-                <AntDesign name='edit' size={30} />
+                <Icon name='pencil' size={40} color='#000000' />
             </CircleButton>
         </View>
     )
