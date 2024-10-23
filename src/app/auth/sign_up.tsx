@@ -3,18 +3,18 @@ import { View, Text, TextInput, StyleSheet } from 'react-native'
 import Header from '../../components/Header'
 import Button from '../../components/Button'
 
-const Login = (): JSX.Element => {
+const Signup = (): JSX.Element => {
     return (
         <View style={styles.container}>
             <Header />
             <View style={styles.inner}>
-                <Text style={styles.title}>Log in</Text>
+                <Text style={styles.title}>Signup</Text>
                 <TextInput style={styles.input} value="Email adress" />
                 <TextInput style={styles.input} value='password' />
-                <Button label='Login'/>
+                <Button label='Sign up'/>
                 <View style={styles.footer}>
-                    <Text style={styles.footerText}>Not registerd</Text>
-                    <Text style={styles.footerLink}>Sign up here!</Text>
+                    <Text style={styles.footerText}>Alreadey registered?</Text>
+                    <Text style={styles.footerLink}>Log in.</Text>
                 </View>
             </View>
         </View>
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     footerLink :{
         fontSize: 14,
         lineHeight: 24,
-        color: '#76F8AC'
+        color: '#00B274'
     }
 })
 
-export default Login
+export default Signup
