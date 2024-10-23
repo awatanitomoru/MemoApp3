@@ -1,4 +1,7 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import {
+    View, Text, TextInput,
+    TouchableOpacity, StyleSheet
+} from 'react-native'
 
 import Header from '../../components/Header'
 import Button from '../../components/Button'
@@ -14,7 +17,9 @@ const Login = (): JSX.Element => {
                 <Button label='Login'/>
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Not registerd</Text>
-                    <Text style={styles.footerLink}>Sign up here!</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.footerLink}>Sign up here!</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
     footerLink :{
         fontSize: 14,
         lineHeight: 24,
-        color: '#76F8AC'
+        color: '#00B274'
     }
 })
 

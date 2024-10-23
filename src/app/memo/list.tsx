@@ -15,7 +15,7 @@ const List = (): JSX.Element => {
                 <MemoListItem />
             </View>
             <CircleButton>
-                <Icon name='plus' size={60} color='#000000' />
+                <Icon name='plus' size={40} color='#000000' />
             </CircleButton>
         </View>
     )

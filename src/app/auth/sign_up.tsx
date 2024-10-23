@@ -1,4 +1,7 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import {
+    View, Text, TextInput,
+    TouchableOpacity, StyleSheet
+} from 'react-native'
 
 import Header from '../../components/Header'
 import Button from '../../components/Button'
@@ -11,10 +14,12 @@ const Signup = (): JSX.Element => {
                 <Text style={styles.title}>Signup</Text>
                 <TextInput style={styles.input} value="Email adress" />
                 <TextInput style={styles.input} value='password' />
-                <Button label='Sign up'/>
+                <Button label='Sign up' />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Alreadey registered?</Text>
-                    <Text style={styles.footerLink}>Log in.</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.footerLink}>Log in.</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
