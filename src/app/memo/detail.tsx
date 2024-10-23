@@ -1,8 +1,13 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native"
+import { router } from "expo-router"
 
 import Header from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
 import Icon from "../../components/icon"
+
+const handolePress = (): void => {
+    router.push('/memo/edit')
+}
 
 const Detaile = (): JSX.Element => {
     return (
@@ -21,7 +26,7 @@ const Detaile = (): JSX.Element => {
                 </Text>
             </ScrollView>
 
-            <CircleButton style={{ top:160, bottom:'auto' }}>
+            <CircleButton style={{ top:160, bottom:'auto' }} OnPress={handolePress}>
                 <Icon name='pencil' size={40} color='#000000' />
             </CircleButton>
         </View>
