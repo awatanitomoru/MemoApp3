@@ -8,17 +8,16 @@ import Icon from '../../components/icon'
 import { auth, db } from '../../config'
 import { type Memo } from '../../../types/memo'
 
-const handolePress = (): void => {
-    router.push('/memo/edit')
+const handolePress = (id: string): void => {
+    router.push({ pathname: '/memo/edit', params: { id }})
 }
 
 const Detaile = (): JSX.Element => {
-    const { id } = useLocalSearchParams()
-    console.log(id)
+    const id = String(useLocalSearchParams().id)
     const [memo, setMemo] = useState<Memo | null>(null)
     useEffect(() => {
         if (auth.currentUser === null) { return }
-        const ref = doc(db, `users/${auth.currentUser.uid}/memos`, String(id))
+        const ref = doc(db, `users/${auth.currentUser.uid}/memos`, id)
         const unsubscribe = onSnapshot(ref, (memoDoc) => {
             const { bodyText, updatedAt } = memoDoc.data() as Memo
             setMemo({
@@ -42,7 +41,7 @@ const Detaile = (): JSX.Element => {
                 </Text>
             </ScrollView>
 
-            <CircleButton style={{ top:54, bottom:'auto' }} OnPress={handolePress}>
+            <CircleButton style={{ top:54, bottom:'auto' }} OnPress={() => {handolePress(id)}}>
                 <Icon name='pencil' size={40} color='#000000' />
             </CircleButton>
         </View>
