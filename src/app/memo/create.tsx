@@ -32,11 +32,13 @@ const Create = (): JSX.Element => {
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.inputContainer}>
                 <TextInput
-                multiline
-                style={styles.input}
-                value={bodyText}
-                onChangeText={(text) => {setBodyText(text)}}
-                autoFocus
+                    multiline
+                    style={styles.input}
+                    value={bodyText}
+                    onChangeText={(text) => {setBodyText(text)}}
+                    autoFocus
+                    keyboardType="default"
+                    autoCapitalize="none"
             />
             </View>
             <CircleButton OnPress={() => { handlePress(bodyText) }}>
