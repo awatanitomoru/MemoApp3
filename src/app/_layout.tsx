@@ -1,6 +1,8 @@
-import { Stack } from "expo-router"
+import { Stack } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 
 const Layout = (): JSX.Element => {
+    <StatusBar style="light" backgroundColor="#76F8AC" />
     return <Stack screenOptions={{
         headerStyle: {
             backgroundColor: '#76F8AC'

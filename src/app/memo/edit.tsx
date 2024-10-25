@@ -13,7 +13,7 @@ const handlePress = (): void => {
 
 const Edit = (): JSX.Element => {
     return (
-        <KeyboardAvoidingView behavior='height' style={styles.container}>
+        <KeyboardAvoidingView behavior='padding' style={styles.container}>
             <View style={styles.inputContainer}>
                 <TextInput multiline style={styles.input} value={'買い物\nリスト'} />
             </View>
